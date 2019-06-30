@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import useReactRouter from 'use-react-router';
 import MessageList from './components/MessageList';
+import PalletList from './components/PalletList';
 
 import logo from './logo.svg';
 import './App.css';
@@ -16,6 +17,7 @@ function AppTop() {
 
 
       <button onClick={() => history.push('/messageList')}>メッセージリスト</button>
+      <button onClick={() => history.push('/palletList')}>パレットリスト</button>
     </div>
   );
 }
@@ -45,6 +47,7 @@ class App extends Component {
               <Route path="/" component={AppTop} exact />
               <Route path="/react" component={HelloReact} exact />
               <Route path="/messageList" component={MessageList} exact />
+              <Route path="/palletList" component={PalletList} exact />
             </Switch>
           </Router>
         </div>
