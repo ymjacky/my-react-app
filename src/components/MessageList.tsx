@@ -27,11 +27,11 @@ const MessageList = () => {
 
     const [msgs, setMsgs] = React.useState<Array<IfMsg>>(items);
 
-    // const addMsg = () => {
-    //     console.debug('addMsg');
-    //     const msg = { id: 22, msg: 'apple' };
-    //     setMsgs([...msgs, msg]);
-    // }
+    const addMsg = () => {
+        console.debug('addMsg');
+        const msg = { id: 22, msg: 'apple' };
+        setMsgs([...msgs, msg]);
+    }
 
 
     const removeMsg = (msg_id: number) => {
@@ -50,6 +50,7 @@ const MessageList = () => {
 
     return (
         <div className="msgArray">
+            <div className='msg_button'><button onClick={() => { addMsg(); }}>メッセージ確認</button></div>
             {msgs.map((item) => {
                 return <div key={item.id} className="msg">
                     <Msg id={item.id} msg={item.msg} removeMsg={() => removeMsg(item.id)} /> </div>
