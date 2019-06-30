@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import useReactRouter from 'use-react-router';
+import MessageList from './components/MessageList';
 
 import logo from './logo.svg';
 import './App.css';
 
-function Hello() {
+function AppTop() {
   const { history, location, match } = useReactRouter();
   return (
     <div>
       <h1>HelloWorld</h1>
       <p>{`pathname: ${location.pathname}`}</p>
       <button onClick={() => history.push('/react')}>Next</button>
+
+
+      <button onClick={() => history.push('/messageList')}>メッセージリスト</button>
     </div>
   );
 }
@@ -38,8 +42,9 @@ class App extends Component {
         <div className="App-intro">
           <Router>
             <Switch>
-              <Route path="/" component={Hello} exact />
+              <Route path="/" component={AppTop} exact />
               <Route path="/react" component={HelloReact} exact />
+              <Route path="/messageList" component={MessageList} exact />
             </Switch>
           </Router>
         </div>

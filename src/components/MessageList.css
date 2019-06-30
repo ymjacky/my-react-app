@@ -1,0 +1,38 @@
+.msg_id {
+    background-color: #86b6f9;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    text-align: left;
+}
+
+.msg_text {
+    border-radius: 8px;
+    text-align: left;
+    margin: 6px;
+    color: rgb(37, 50, 50)
+}
+
+.msgArray {
+
+    padding: 32px;
+    /* box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 8px; */
+    min-width: 60px;
+    margin: 20px;
+}
+
+
+
+.msg {
+    text-indent: 4px;
+    margin: 6px;
+    /* display: inline-block; */
+    text-align: center;
+    padding-bottom: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5);
+    background-color: #759ef1;
+    /* background-image: radial-gradient(circle at 62% 44%, #53cbf3, #5801bc); */
+    min-width: 60px;
+    word-wrap: break-word;
+}
